@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="billBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14532d" />
+      <stop offset="50%" stop-color="#0f291e" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="16" fill="url(#billBg)" />
+  <rect x="40" y="36" width="520" height="288" rx="12" fill="#0b1311" stroke="#166534" stroke-width="1.5" />
+  <rect x="40" y="36" width="520" height="40" rx="12" fill="#143825" />
+  <circle cx="64" cy="56" r="5" fill="#ef4444" /><circle cx="80" cy="56" r="5" fill="#f59e0b" /><circle cx="96" cy="56" r="5" fill="#10b981" />
+  <text x="300" y="61" fill="#86efac" font-family="monospace" font-size="12" text-anchor="middle">boutique-pos // desktop-gui-database</text>
+
+  <!-- Left: POS Cart -->
+  <rect x="64" y="96" width="230" height="190" rx="8" fill="#11221b" stroke="#15803d" stroke-width="1" />
+  <text x="80" y="120" fill="#f0fdf4" font-family="sans-serif" font-size="11" font-weight="bold">Boutique Checkout</text>
+  
+  <rect x="80" y="132" width="198" height="22" rx="4" fill="#14532d" />
+  <text x="88" y="147" fill="#bbf7d0" font-family="monospace" font-size="9">Silk Saree #SKU-402  x1  $120.00</text>
+  
+  <rect x="80" y="160" width="198" height="22" rx="4" fill="#14532d" />
+  <text x="88" y="175" fill="#bbf7d0" font-family="monospace" font-size="9">Embroidered Stole    x2  $45.00</text>
+
+  <rect x="80" y="188" width="198" height="22" rx="4" fill="#14532d" />
+  <text x="88" y="203" fill="#bbf7d0" font-family="monospace" font-size="9">Jewelry Accent Kit   x1  $35.00</text>
+
+  <line x1="80" y1="220" x2="278" y2="220" stroke="#22c55e" stroke-dasharray="2,2" />
+  <text x="80" y="238" fill="#86efac" font-family="sans-serif" font-size="10">Subtotal: $200.00 | Tax: 5%</text>
+  <text x="80" y="255" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold">Total: $210.00</text>
+  <rect x="180" y="240" width="98" height="26" rx="4" fill="#16a34a" />
+  <text x="229" y="257" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Generate Bill</text>
+
+  <!-- Right: Relational Database Schema & Stock Alert -->
+  <rect x="310" y="96" width="226" height="190" rx="8" fill="#0f1f17" stroke="#16a34a" stroke-width="1" />
+  <text x="326" y="120" fill="#4ade80" font-family="sans-serif" font-size="11" font-weight="bold">Inventory Ledger</text>
+
+  <rect x="326" y="132" width="194" height="48" rx="4" fill="#0b1712" />
+  <text x="334" y="148" fill="#86efac" font-family="monospace" font-size="9">SKU-402: 14 units in stock</text>
+  <text x="334" y="162" fill="#86efac" font-family="monospace" font-size="9">SKU-209: 3 units [REORDER]</text>
+  <text x="334" y="174" fill="#eab308" font-family="monospace" font-size="8.5">• Low inventory alert triggered</text>
+
+  <rect x="326" y="190" width="194" height="42" rx="4" fill="#064e3b" />
+  <text x="334" y="206" fill="#a7f3d0" font-family="sans-serif" font-size="9" font-weight="bold">ACID Transaction Log:</text>
+  <text x="334" y="222" fill="#d1fae5" font-family="monospace" font-size="8.5">COMMIT tx_8912; balance updated</text>
+
+  <rect x="326" y="242" width="194" height="24" rx="4" fill="#15803d" />
+  <text x="423" y="258" fill="#f0fdf4" font-family="sans-serif" font-size="9.5" font-weight="600" text-anchor="middle">Print Thermal Receipt</text>
+</svg>

@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Swetha N. — Computer Science and Design Engineering Student, Aspiring Software Developer. Experience in Java, Python, Spring Boot, RAG & Vector Search (Zoho Intern), and 500+ LeetCode problems solved.">
+  <meta name="keywords" content="Swetha N, Portfolio, Software Engineering Intern, Computer Science and Design, RAG, Spring Boot, LeetCode, Python, Java, React, Chennai">
+  <meta name="author" content="Swetha N.">
+  <meta name="theme-color" content="#090d16">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Swetha N. | Software Engineering Intern & CS Student">
+  <meta property="og:description" content="Portfolio of Swetha N. — Backend, RAG & AI systems, Spring Boot, and 500+ LeetCode problem solving.">
+  <meta property="og:type" content="website">
+
+  <title>Swetha N. | Computer Science &amp; Design Engineer | Portfolio</title>
+
+  <!-- Prevent Theme Flash -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('swetha_portfolio_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation Bar -->
+  <header class="header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-link" aria-label="Swetha N. Portfolio Home">
+        <span>Swetha N<span style="color: var(--accent-primary);">.</span></span>
+        <span class="brand-badge">CS &amp; Design</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#journey" class="nav-link">Journey</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions: Theme Toggle & Mobile Trigger -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" type="button" aria-label="Toggle light/dark theme" title="Toggle color theme">
+          <span id="themeIconContainer">
+            <!-- Icon injected via JS -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          </span>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open navigation menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ====================================================================
+         1. Hero Section (Personal, Balanced & Multi-Project Showcase)
+         ==================================================================== -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left: Personal Introduction -->
+          <div class="hero-content">
+            <div class="availability-pill">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              <span>Available for Software Engineering Roles &amp; Internships</span>
+            </div>
+
+            <h1 class="hero-name" id="hero-title">
+              Hi, I'm <span class="hero-name-highlight">Swetha N<span class="hero-dot">.</span></span>
+            </h1>
+
+            <div class="hero-role">
+              <span>Computer Science &amp; Design Student</span>
+              <span class="separator" aria-hidden="true">&middot;</span>
+              <span>Software Developer</span>
+              <span class="separator" aria-hidden="true">&middot;</span>
+              <span>Problem Solver</span>
+            </div>
+
+            <p class="hero-bio">
+              I enjoy turning complex problems into practical software &mdash; from backend systems and AI-powered applications to web experiences. I spend my time building projects, exploring new technologies, and strengthening my problem-solving skills.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>Explore Projects</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+
+              <a href="assets/resume/Swetha_N_Resume.pdf" download="Swetha_N_Resume.pdf" class="btn btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                <span>Download Resume</span>
+              </a>
+
+              <button type="button" class="btn btn-outline" id="heroPreviewResumeBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                <span>Quick View</span>
+              </button>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links" aria-label="Social Profiles">
+              <a href="https://github.com/swethanagaraj2007" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile" aria-label="GitHub Profile (swethanagaraj2007)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              </a>
+
+              <a href="https://linkedin.com/in/n-swetha-1bb652309" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile" aria-label="LinkedIn Profile (Swetha N.)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+
+              <a href="https://leetcode.com/u/swethaNagaraj" target="_blank" rel="noopener noreferrer" class="social-link" title="LeetCode Profile" aria-label="LeetCode Profile (swethaNagaraj - 500+ Solved)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </a>
+
+              <a href="mailto:swetha.n.connect@gmail.com" class="social-link" title="Direct Email" aria-label="Send Email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Selected Work Composition (1 Featured Lead + 2 Secondary Previews) -->
+          <div class="hero-visual">
+            <div class="hero-selected-showcase">
+              <div class="showcase-header-bar">
+                <div class="showcase-header-left">
+                  <span class="showcase-status-indicator" aria-hidden="true"></span>
+                  <span class="showcase-heading-title">Selected Work</span>
+                </div>
+                <a href="#projects" class="showcase-all-link">All 7 Projects &rarr;</a>
+              </div>
+
+              <!-- 1. Featured Lead Project: Smart SMS -->
+              <article class="showcase-lead-card btn-case-study" data-project-id="smart-sms" role="button" tabindex="0" aria-label="Open case study for Smart SMS">
+                <div class="showcase-lead-media">
+                  <img src="assets/images/project-smart-sms.svg" alt="Smart SMS browser extension architecture and streak visual" class="showcase-lead-img" />
+                  <span class="showcase-category-badge">Browser Extension &middot; Developer Tools</span>
+                </div>
+                <div class="showcase-lead-content">
+                  <div class="showcase-lead-title-row">
+                    <h3 class="showcase-lead-title">Smart SMS &mdash; LeetCode Activity Tracker</h3>
+                    <span class="showcase-arrow" aria-hidden="true">&rarr;</span>
+                  </div>
+                  <p class="showcase-lead-desc">
+                    Chrome extension (Manifest V3) with background service workers to log problem-solving streaks, topic distribution, and submission analytics directly from the browser.
+                  </p>
+                  <div class="showcase-tags-row">
+                    <span class="showcase-mini-tag">JavaScript (ES6+)</span>
+                    <span class="showcase-mini-tag">Chrome MV3</span>
+                    <span class="showcase-mini-tag">Node.js</span>
+                    <span class="showcase-mini-tag">REST APIs</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 2. Asymmetric Secondary Previews (Resume Intelligence + Datasheet Conversion) -->
+              <div class="showcase-secondary-grid">
+                <!-- Preview 2: Resume Intelligence -->
+                <article class="showcase-sub-card btn-case-study" data-project-id="resume-intelligence" role="button" tabindex="0" aria-label="Open case study for Resume Intelligence">
+                  <div class="showcase-sub-media">
+                    <img src="assets/images/project-resume-ai.svg" alt="Resume Intelligence architecture visual" class="showcase-sub-img" />
+                  </div>
+                  <div class="showcase-sub-content">
+                    <span class="showcase-sub-label">AI &middot; Document Intelligence</span>
+                    <h4 class="showcase-sub-title">Resume Intelligence</h4>
+                    <p class="showcase-sub-desc">AI resume parser and skills taxonomy matcher generating tailored interview questions.</p>
+                    <div class="showcase-sub-tags">
+                      <span>Python</span>
+                      <span>FastAPI</span>
+                      <span>NLP</span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Preview 3: Datasheet Conversion Platform -->
+                <article class="showcase-sub-card btn-case-study" data-project-id="datasheet-conversion" role="button" tabindex="0" aria-label="Open case study for Datasheet Conversion Platform">
+                  <div class="showcase-sub-media">
+                    <img src="assets/images/project-datasheet.svg" alt="Datasheet Conversion platform visual" class="showcase-sub-img" />
+                  </div>
+                  <div class="showcase-sub-content">
+                    <span class="showcase-sub-label">Document Engineering</span>
+                    <h4 class="showcase-sub-title">Datasheet Conversion</h4>
+                    <p class="showcase-sub-desc">Technical specification extraction, tabular normalization, and branded PDF generation.</p>
+                    <div class="showcase-sub-tags">
+                      <span>Python</span>
+                      <span>JSON Schema</span>
+                      <span>PDF ETL</span>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Understated Profile Highlights Bar (Balanced Developer Profile) -->
+        <div class="hero-highlights-strip">
+          <div class="highlight-item">
+            <span class="highlight-label">Academic Foundations</span>
+            <span class="highlight-val">B.E. Computer Science &amp; Design &middot; 8.65 CGPA</span>
+          </div>
+          <div class="highlight-divider" aria-hidden="true"></div>
+          <div class="highlight-item">
+            <span class="highlight-label">Focus Areas</span>
+            <span class="highlight-val">Backend Architecture, Applied AI &amp; Web Systems</span>
+          </div>
+          <div class="highlight-divider" aria-hidden="true"></div>
+          <div class="highlight-item">
+            <span class="highlight-label">Problem Solving</span>
+            <span class="highlight-val">500+ LeetCode Challenges &middot; TCS AI Hackathon (3rd)</span>
+          </div>
+          <div class="highlight-divider" aria-hidden="true"></div>
+          <div class="highlight-item">
+            <span class="highlight-label">Practical Experience</span>
+            <span class="highlight-val">Production SWE Internships &amp; Open Source</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         2. About Me Section
+         ==================================================================== -->
+    <section class="section section-alt" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Identity &amp; Philosophy</span>
+          <h2 class="section-title" id="about-title">Bridging Algorithmic Logic &amp; Thoughtful Design</h2>
+          <p class="section-subtitle">
+            How a dual background in Computer Science and Design shapes the way I build software.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Text Narrative -->
+          <div class="about-text">
+            <p>
+              I am an undergraduate engineering student pursuing my <strong>B.E. in Computer Science and Design</strong> at Rajalakshmi Engineering College (Class of 2028). My journey started with mastering programming fundamentals in C, Java, and Python, progressing into a deep love for data structures, algorithms, and systems engineering.
+            </p>
+            <p>
+              During my summer software engineering internship at <strong>Zoho Corporation</strong>, I built an end-to-end RAG-based semantic search query assistant over internal OpenAPI and YAML specifications. Transforming dense technical specifications into vectorized embeddings using Sentence Transformers and Qdrant taught me how to write resilient code for real-world production environments.
+            </p>
+            <p>
+              Beyond coding, my background in design (Figma, visual hierarchy, ergonomics) gives me an instinct for user empathy. Whether designing clinical EHR workflows in <strong>Spring Boot &amp; React</strong> or building immersive virtual reality interview tools with <strong>Unity &amp; Convai</strong>, I care about both structural elegance and intuitive usability.
+            </p>
+            <p>
+              When I'm not grinding algorithmic challenges on LeetCode or hacking on AI prototypes, you'll find me exploring UI design systems, reading tech blogs, and tinkering with visual communication tools.
+            </p>
+          </div>
+
+          <!-- Feature Highlight Cards -->
+          <div class="about-cards">
+            <div class="about-card">
+              <div class="about-card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <div class="about-card-content">
+                <h3>Strong Problem Solving &amp; DSA</h3>
+                <p>Over 500+ LeetCode problems solved across trees, graphs, dynamic programming, and binary search. 5-star Python rating and SQL certified on HackerRank.</p>
+              </div>
+            </div>
+
+            <div class="about-card">
+              <div class="about-card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div class="about-card-content">
+                <h3>Applied AI &amp; Semantic Retrieval</h3>
+                <p>Hands-on implementation experience with RAG, embeddings (all-MiniLM-L6-v2), vector databases (Qdrant), and conversational agents.</p>
+              </div>
+            </div>
+
+            <div class="about-card">
+              <div class="about-card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h10"/><path d="M7 12h10"/><path d="M7 17h10"/></svg>
+              </div>
+              <div class="about-card-content">
+                <h3>Systems &amp; Design Synergy</h3>
+                <p>Comfortable across the stack: from normalized relational DB schemas in PostgreSQL to REST API contracts in Spring Boot and prototypes in Figma.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. Skills Section
+         ==================================================================== -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Competencies</span>
+          <h2 class="section-title" id="skills-title">Technical Skillset &amp; Tooling</h2>
+          <p class="section-subtitle">
+            Grounded in core fundamentals and practical project experience. No arbitrary percentages.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Programming Languages -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3 class="skill-category-title">Programming Languages</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge">Java</span>
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">SQL</span>
+              <span class="skill-badge">JavaScript (ES6+)</span>
+              <span class="skill-badge">C</span>
+            </div>
+          </div>
+
+          <!-- Backend & Architecture -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </div>
+              <h3 class="skill-category-title">Backend &amp; APIs</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge">Spring Boot</span>
+              <span class="skill-badge">RESTful API Design</span>
+              <span class="skill-badge">PostgreSQL</span>
+              <span class="skill-badge">JWT Authentication</span>
+              <span class="skill-badge">OpenAPI / Swagger</span>
+              <span class="skill-badge">OOP Architecture</span>
+            </div>
+          </div>
+
+          <!-- AI & Technical Interests -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+              </div>
+              <h3 class="skill-category-title">AI &amp; Semantic Retrieval</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge">RAG Pipelines</span>
+              <span class="skill-badge">Sentence Transformers</span>
+              <span class="skill-badge">Qdrant Vector DB</span>
+              <span class="skill-badge">Embeddings &amp; Cosine Similarity</span>
+              <span class="skill-badge">AI Summarization</span>
+            </div>
+          </div>
+
+          <!-- Web & Frontend -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+              </div>
+              <h3 class="skill-category-title">Web Technologies</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge">React</span>
+              <span class="skill-badge">HTML5 Semantic</span>
+              <span class="skill-badge">CSS3 &amp; Flexbox/Grid</span>
+              <span class="skill-badge">Responsive Design</span>
+              <span class="skill-badge">Chrome Extensions MV3</span>
+            </div>
+          </div>
+
+          <!-- Design & Tools -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <h3 class="skill-category-title">Design &amp; Developer Tools</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge">Git &amp; GitHub</span>
+              <span class="skill-badge">Figma</span>
+              <span class="skill-badge">Canva</span>
+              <span class="skill-badge">Adobe Illustrator</span>
+              <span class="skill-badge">Agile / Scrum</span>
+              <span class="skill-badge">Unity 3D Basics</span>
+            </div>
+          </div>
+
+          <!-- Problem Solving & Theory -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-category-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+              </div>
+              <h3 class="skill-category-title">Core CS Fundamentals</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge">Data Structures &amp; Algorithms</span>
+              <span class="skill-badge">Database Management (DBMS)</span>
+              <span class="skill-badge">Operating Systems Concepts</span>
+              <span class="skill-badge">Time &amp; Space Complexity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. Projects Section
+         ==================================================================== -->
+    <section class="section section-alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title" id="projects-title">Built with Purpose</h2>
+          <p class="section-subtitle">
+            A curated selection of software projects, from production RAG pipelines at Zoho to full-stack clinical applications.
+          </p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="project-filters" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all" type="button">All Projects</button>
+          <button class="filter-btn" data-filter="ai" type="button">AI &amp; Semantic Search</button>
+          <button class="filter-btn" data-filter="fullstack" type="button">Full-Stack &amp; Backend</button>
+          <button class="filter-btn" data-filter="tools" type="button">Developer Tools &amp; Systems</button>
+        </div>
+
+        <!-- Dynamic Projects Grid (Populated via js/main.js from js/projects.js) -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Fallback noscript or dynamic insertion -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. Experience & Achievements Section
+         ==================================================================== -->
+    <section class="section" id="experience" aria-labelledby="exp-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Experience &amp; Honors</span>
+          <h2 class="section-title" id="exp-title">Industry Exposure &amp; Milestones</h2>
+          <p class="section-subtitle">
+            Real engineering contributions in production teams and competitive hackathon achievements.
+          </p>
+        </div>
+
+        <!-- Zoho Internship Card -->
+        <article class="experience-card">
+          <div class="experience-header">
+            <div class="experience-title-group">
+              <h3>Software Engineering Summer Intern</h3>
+              <div class="experience-company">Zoho Corporation</div>
+            </div>
+            <div class="experience-meta">
+              <span>Summer 2024</span>
+              <span>•</span>
+              <span>Chennai, India</span>
+            </div>
+          </div>
+
+          <ul class="experience-bullets">
+            <li>Built an internal RAG-based natural-language query assistant for internal API information, parsing and normalizing complex OpenAPI and YAML specifications into structured data for downstream retrieval.</li>
+            <li>Generated natural-language questions, SQL queries, and parameter descriptions directly from API specifications to empower semantic search over internal microservice schemas.</li>
+            <li>Engineered an embedding pipeline utilizing <strong>Sentence Transformers (all-MiniLM-L6-v2)</strong> and indexed dense vectors in a <strong>Qdrant Vector Database</strong> for low-latency similarity retrieval.</li>
+            <li>Implemented Retrieval-Augmented Generation (RAG) workflows to map fuzzy developer queries to exact parameterized API endpoints and database table fields.</li>
+            <li>Analyzed and resolved complex API dependency mappings between parameterized and non-parameterized routes, parsing large YAML specs into structured JSON/table representations.</li>
+            <li>Developed an interactive API dependency visualization tree using HTML/CSS paired with Python parsing logic, integrating with Open WebUI and related AI developer tooling.</li>
+          </ul>
+        </article>
+
+        <!-- Achievements Grid -->
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <div class="achievement-icon" aria-hidden="true">🥉</div>
+            <div class="achievement-text">
+              <h4>3rd Place — TCS AI Hackathon</h4>
+              <p>Recognized for designing and building an AI-driven solution under competitive time constraints and rigorous evaluation.</p>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon" aria-hidden="true">⚡</div>
+            <div class="achievement-text">
+              <h4>500+ LeetCode Solved</h4>
+              <p>Consistent daily practice sharpening intuition in Trees, Graphs, Dynamic Programming, and two-pointer patterns.</p>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon" aria-hidden="true">⭐</div>
+            <div class="achievement-text">
+              <h4>5-Star Python on HackerRank</h4>
+              <p>Achieved top-tier problem solving ranking along with certified competencies in Python and SQL fundamentals.</p>
+            </div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-icon" aria-hidden="true">🎓</div>
+            <div class="achievement-text">
+              <h4>Academic Excellence (CGPA: 8.65)</h4>
+              <p>Consistent top performance across core coursework: Data Structures, Object-Oriented Design, Database Management, and UI/UX.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. Learning Journey Timeline Section
+         ==================================================================== -->
+    <section class="section section-alt" id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Continuous Growth</span>
+          <h2 class="section-title" id="journey-title">My Learning Journey</h2>
+          <p class="section-subtitle">
+            A progressive timeline from coding fundamentals to building production AI applications.
+          </p>
+        </div>
+
+        <div class="journey-timeline">
+          <!-- Step 1 -->
+          <div class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-period">Phase 1 • 2023 – 2024</div>
+              <h3 class="timeline-heading">Foundations &amp; Algorithmic Thinking</h3>
+              <p class="timeline-desc">
+                Learned core programming in C, Python, and Java. Built an early habit of daily problem solving, understanding arrays, linked lists, recursion, and algorithm efficiency. Achieved 94.6% in Class XII examinations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-period">Phase 2 • 2024</div>
+              <h3 class="timeline-heading">Deep Dive into DSA &amp; Computer Science &amp; Design</h3>
+              <p class="timeline-desc">
+                Commenced B.E. in Computer Science and Design at Rajalakshmi Engineering College. Surpassed 300+ LeetCode problems, mastering trees, graphs, and dynamic programming while studying interaction design, Figma, and software modeling.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-period">Phase 3 • Summer 2024</div>
+              <h3 class="timeline-heading">Software Engineering Summer Internship @ Zoho</h3>
+              <p class="timeline-desc">
+                Stepped into industry engineering. Designed and shipped a RAG-based natural language assistant using Sentence Transformers and Qdrant Vector DB to query internal OpenAPI/YAML specs. Gained invaluable teamwork and production engineering experience.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-period">Phase 4 • 2024 – 2025</div>
+              <h3 class="timeline-heading">Full-Stack Systems &amp; Applied AI Innovations</h3>
+              <p class="timeline-desc">
+                Architected the <strong>PHC AI Companion</strong> using Spring Boot, PostgreSQL, and React. Built the <strong>AI-Powered VR Mock Interview Platform</strong> in Unity with Convai to combat placement anxiety. Won 3rd Place at the TCS AI Hackathon.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-period">Phase 5 • Present &amp; Forward</div>
+              <h3 class="timeline-heading">Scale, Distributed Architectures &amp; Open Source</h3>
+              <p class="timeline-desc">
+                Crossed 500+ LeetCode milestones. Currently exploring advanced distributed system patterns, document engineering pipelines, and seeking Software Engineering Intern roles where I can contribute to mission-critical infrastructure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         7. Resume Section
+         ==================================================================== -->
+    <section class="section" id="resume" aria-labelledby="resume-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Credentials</span>
+          <h2 class="section-title" id="resume-title">Curriculum Vitae</h2>
+          <p class="section-subtitle">
+            A comprehensive overview of my academic background, technical skills, and internship contributions.
+          </p>
+        </div>
+
+        <div class="resume-box">
+          <div class="resume-details">
+            <h3>Swetha N. — Resume Summary</h3>
+            <p>
+              My resume summarizes my software engineering internship at <strong>Zoho Corporation</strong>, academic background at <strong>Rajalakshmi Engineering College (CGPA: 8.65)</strong>, full-stack projects in Spring Boot &amp; React, and problem-solving credentials (500+ LeetCode problems solved).
+            </p>
+
+            <div class="resume-actions">
+              <a href="assets/resume/Swetha_N_Resume.pdf" download="Swetha_N_Resume.pdf" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                <span>Download Resume (PDF)</span>
+              </a>
+
+              <button type="button" class="btn btn-secondary" id="previewResumeBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                <span>Interactive Preview</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="resume-highlights">
+            <div class="resume-highlight-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <div>
+                <h4>B.E. Computer Science and Design</h4>
+                <p>Rajalakshmi Engineering College (2024–2028) • CGPA: 8.65</p>
+              </div>
+            </div>
+
+            <div class="resume-highlight-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <div>
+                <h4>Summer Internship at Zoho Corp</h4>
+                <p>Production RAG, Qdrant Vector DB, OpenAPI &amp; Python</p>
+              </div>
+            </div>
+
+            <div class="resume-highlight-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <div>
+                <h4>500+ LeetCode Problems Solved</h4>
+                <p>Consistent algorithmic fluency across Core Data Structures</p>
+              </div>
+            </div>
+
+            <div class="resume-highlight-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <div>
+                <h4>TCS AI Hackathon — 3rd Place</h4>
+                <p>Proven track record of shipping under pressure</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         8. Contact Section
+         ==================================================================== -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title" id="contact-title">Get In Touch</h2>
+          <p class="section-subtitle">
+            Whether you are discussing a software engineering internship opportunity, collaborating on a project, or just saying hello!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details -->
+          <div class="contact-info">
+            <div class="contact-card">
+              <div class="contact-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <a href="mailto:swetha.n.connect@gmail.com">swetha.n.connect@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-details">
+                <h4>Phone</h4>
+                <p>+91 9790936409</p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Chennai, Tamil Nadu, India</p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div class="contact-details">
+                <h4>LinkedIn &amp; GitHub</h4>
+                <p>
+                  <a href="https://linkedin.com/in/n-swetha-1bb652309" target="_blank" rel="noopener noreferrer">linkedin.com/in/n-swetha-1bb652309</a><br>
+                  <a href="https://github.com/swethanagaraj2007" target="_blank" rel="noopener noreferrer">github.com/swethanagaraj2007</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Validated Contact Form -->
+          <div class="contact-form-card">
+            <div id="formFeedback" class="form-feedback" role="alert"></div>
+
+            <form id="contactForm" novalidate aria-label="Contact Swetha N.">
+              <div class="form-group">
+                <label for="contactName" class="form-label">Your Name <span style="color:#ef4444;">*</span></label>
+                <input type="text" id="contactName" class="form-control" placeholder="e.g. Maya Sharma" required autocomplete="name">
+                <div class="form-error-msg" id="contactNameError"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Email Address <span style="color:#ef4444;">*</span></label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="maya@example.com" required autocomplete="email">
+                <div class="form-error-msg" id="contactEmailError"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" class="form-label">Subject <span style="color:#ef4444;">*</span></label>
+                <input type="text" id="contactSubject" class="form-control" placeholder="SWE Internship Opportunity / Project Collaboration" required>
+                <div class="form-error-msg" id="contactSubjectError"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Message <span style="color:#ef4444;">*</span></label>
+                <textarea id="contactMessage" class="form-control" rows="5" placeholder="Hi Swetha, I came across your work on RAG pipelines and LeetCode..." required></textarea>
+                <div class="form-error-msg" id="contactMessageError"></div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                <span>Send Message</span>
+              </button>
+
+              <p class="form-notice">
+                Protected by client-side validation. Because this portfolio is purely static and runs without an external backend, submitting here validates your fields and generates an email mailto trigger. In production, you can connect this seamlessly to Formspree, EmailJS, or Cloudflare Workers.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       Footer
+       ==================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="brand-link" style="font-size: 1.15rem;">
+        <span>Swetha N.</span>
+        <span class="brand-badge">Portfolio</span>
+      </div>
+
+      <p class="footer-text">
+        Crafted with semantic HTML5, modern CSS3, and vanilla JavaScript. No generic templates.
+      </p>
+
+      <div class="social-links">
+        <a href="https://github.com/swethanagaraj2007" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/n-swetha-1bb652309" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://leetcode.com/u/swethaNagaraj" target="_blank" rel="noopener noreferrer" class="social-link" title="LeetCode" aria-label="LeetCode">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </a>
+      </div>
+
+      <p class="footer-text" style="font-size: 0.8rem; margin-top: 8px;">
+        &copy; 2026 Swetha N. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTopBtn" type="button" aria-label="Back to top of page" title="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- ====================================================================
+       Case Study Modal Dialog (Modern <dialog> with closedby="any")
+       ==================================================================== -->
+  <dialog id="caseStudyModal" closedby="any" aria-labelledby="modalProjectTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalProjectTitle">Project Case Study</h3>
+        <button type="button" class="modal-close-btn" id="closeModalBtn" aria-label="Close case study dialog">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="case-section">
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+            Problem Statement
+          </h4>
+          <p id="modalProblemStatement"></p>
+        </div>
+
+        <div class="case-section">
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            Approach &amp; Architecture
+          </h4>
+          <ul id="modalArchitectureList"></ul>
+        </div>
+
+        <div class="case-section">
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+            Key Challenges &amp; Solutions
+          </h4>
+          <p id="modalChallenges"></p>
+        </div>
+
+        <div class="case-section">
+          <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            What I Learned
+          </h4>
+          <p id="modalLearnings"></p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a id="modalGithubLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size:0.875rem; padding:8px 16px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          <span>View on GitHub</span>
+        </a>
+        <button type="button" class="btn btn-secondary" id="footerCloseModalBtn" style="font-size:0.875rem; padding:8px 16px;">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ====================================================================
+       Resume Preview Modal Dialog
+       ==================================================================== -->
+  <dialog id="resumeModal" closedby="any" aria-labelledby="resumeModalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title" id="resumeModalTitle">Resume Preview — Swetha N.</h3>
+        <button type="button" class="modal-close-btn" id="closeResumeModalBtn" aria-label="Close resume preview dialog">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="modal-body" style="padding: 24px; gap: 16px;">
+        <div style="background-color: var(--bg-secondary); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 18px;">
+          <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 6px;">Swetha N.</h4>
+          <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 12px;">
+            Software Engineering Intern Candidate • +91 9790936409 • swetha.n.connect@gmail.com
+          </p>
+          <div style="font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary);">
+            <strong>Education:</strong> Rajalakshmi Engineering College — B.E. Computer Science and Design (2024–2028), CGPA: 8.65.<br/>
+            <strong>Experience:</strong> Zoho Corporation — Software Engineering Summer Intern (RAG Semantic Search, Qdrant DB, OpenAPI).<br/>
+            <strong>Core Projects:</strong> PHC AI Companion (Spring Boot, React, PostgreSQL) &amp; VR Mock Interview Platform (Unity, Convai).<br/>
+            <strong>Achievements:</strong> 3rd Place TCS AI Hackathon, 500+ LeetCode problems solved, 5-Star Python on HackerRank.
+          </div>
+        </div>
+
+        <iframe src="assets/resume/Swetha_N_Resume.pdf" title="Swetha N. Resume PDF Viewer" style="width: 100%; height: 380px; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: #ffffff;"></iframe>
+      </div>
+
+      <div class="modal-footer">
+        <a href="assets/resume/Swetha_N_Resume.pdf" download="Swetha_N_Resume.pdf" class="btn btn-primary" style="font-size: 0.875rem; padding: 8px 18px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          <span>Download PDF Document</span>
+        </a>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Project Catalog Data Script -->
+  <script src="js/projects.js"></script>
+  <!-- Core Interactivity Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>

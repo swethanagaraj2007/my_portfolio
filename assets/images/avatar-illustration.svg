@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <linearGradient id="innerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow -->
+  <circle cx="200" cy="200" r="170" fill="url(#avatarBg)" opacity="0.3" filter="url(#softGlow)" />
+
+  <!-- Outer Gradient Ring -->
+  <circle cx="200" cy="200" r="160" fill="none" stroke="url(#ringGrad)" stroke-width="4" stroke-dasharray="16 8" />
+
+  <!-- Inner Circle Base -->
+  <circle cx="200" cy="200" r="148" fill="url(#innerBg)" stroke="#334155" stroke-width="2" />
+
+  <!-- Background code / geometry elements -->
+  <g opacity="0.15" stroke="#ffffff" stroke-width="1">
+    <line x1="100" y1="80" x2="300" y2="80" />
+    <line x1="80" y1="120" x2="320" y2="120" />
+    <line x1="80" y1="280" x2="320" y2="280" />
+    <line x1="100" y1="320" x2="300" y2="320" />
+  </g>
+
+  <!-- Central Visual: Stylized Developer Monogram & Coding Core -->
+  <g transform="translate(200, 190)">
+    <!-- Floating Hexagon Mesh representing Computer Science & Design -->
+    <polygon points="0,-85 74,-42 74,42 0,85 -74,42 -74,-42" fill="#1e1b4b" stroke="#6366f1" stroke-width="3" opacity="0.9" />
+    <polygon points="0,-72 62,-36 62,36 0,72 -62,36 -62,-36" fill="#0f172a" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="6,4" />
+
+    <!-- Code Brackets & Stylized 'SN' Monogram -->
+    <path d="M -45,-25 L -65,0 L -45,25" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M 45,-25 L 65,0 L 45,25" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <!-- Central Monogram 'S' -->
+    <text x="0" y="16" fill="#f8fafc" font-family="'Outfit', 'Inter', -apple-system, sans-serif" font-size="52" font-weight="800" text-anchor="middle" letter-spacing="-1">SN</text>
+  </g>
+
+  <!-- Floating Badges around avatar -->
+  <!-- Top badge: CS & Design -->
+  <g transform="translate(200, 68)">
+    <rect x="-65" y="-14" width="130" height="28" rx="14" fill="#0f172a" stroke="#6366f1" stroke-width="1.5" />
+    <text x="0" y="4" fill="#c7d2fe" font-family="sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">CS &amp; DESIGN</text>
+  </g>
+
+  <!-- Bottom Left badge: 500+ LeetCode -->
+  <g transform="translate(90, 310)">
+    <rect x="-55" y="-14" width="110" height="28" rx="14" fill="#18181b" stroke="#f97316" stroke-width="1.5" />
+    <circle cx="-38" cy="0" r="4" fill="#f97316" />
+    <text x="4" y="4" fill="#fed7aa" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle">500+ LeetCode</text>
+  </g>
+
+  <!-- Bottom Right badge: RAG & AI -->
+  <g transform="translate(310, 310)">
+    <rect x="-50" y="-14" width="100" height="28" rx="14" fill="#042f2e" stroke="#14b8a6" stroke-width="1.5" />
+    <circle cx="-35" cy="0" r="4" fill="#2dd4bf" />
+    <text x="5" y="4" fill="#ccfbf1" font-family="sans-serif" font-size="10" font-weight="700" text-anchor="middle">RAG / AI Dev</text>
+  </g>
+</svg>

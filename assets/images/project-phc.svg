@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="40%" stop-color="#022c22" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="16" fill="url(#bgGrad2)" />
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="360" /><line x1="200" y1="0" x2="200" y2="360" /><line x1="300" y1="0" x2="300" y2="360" />
+    <line x1="400" y1="0" x2="400" y2="360" /><line x1="500" y1="0" x2="500" y2="360" /><line x1="0" y1="120" x2="600" y2="120" />
+    <line x1="0" y1="240" x2="600" y2="240" />
+  </g>
+  <!-- Window Header -->
+  <rect x="40" y="36" width="520" height="288" rx="12" fill="#0b1317" stroke="#1e293b" stroke-width="1.5" />
+  <rect x="40" y="36" width="520" height="40" rx="12" fill="#0f1f1d" />
+  <circle cx="64" cy="56" r="5" fill="#ef4444" />
+  <circle cx="80" cy="56" r="5" fill="#f59e0b" />
+  <circle cx="96" cy="56" r="5" fill="#10b981" />
+  <text x="300" y="61" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">phc-ai-companion // spring-boot-ehr</text>
+
+  <!-- Left Sidebar: Modules -->
+  <rect x="64" y="96" width="120" height="190" rx="8" fill="#111c1d" stroke="#134e4a" stroke-width="1" />
+  <text x="76" y="122" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="bold">CLINICAL EHR</text>
+  <rect x="76" y="136" width="96" height="20" rx="4" fill="#064e3b" />
+  <text x="84" y="150" fill="#a7f3d0" font-family="sans-serif" font-size="9.5">Doctor Portal</text>
+  <rect x="76" y="164" width="96" height="20" rx="4" fill="#162e2b" />
+  <text x="84" y="178" fill="#6ee7b7" font-family="sans-serif" font-size="9.5">Nurse Vitals</text>
+  <rect x="76" y="192" width="96" height="20" rx="4" fill="#162e2b" />
+  <text x="84" y="206" fill="#6ee7b7" font-family="sans-serif" font-size="9.5">Reception Intake</text>
+  <rect x="76" y="220" width="96" height="20" rx="4" fill="#162e2b" />
+  <text x="84" y="234" fill="#6ee7b7" font-family="sans-serif" font-size="9.5">PostgreSQL Sync</text>
+  <rect x="76" y="248" width="96" height="24" rx="4" fill="#047857" />
+  <text x="124" y="264" fill="#ecfdf5" font-family="sans-serif" font-size="9.5" font-weight="600" text-anchor="middle">JWT Authorized</text>
+
+  <!-- Main Patient History & AI Summarizer -->
+  <rect x="200" y="96" width="336" height="190" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+  <rect x="216" y="112" width="180" height="18" rx="4" fill="#1e293b" />
+  <text x="224" y="125" fill="#f1f5f9" font-family="sans-serif" font-size="11" font-weight="bold">Patient Record #2024-884</text>
+  
+  <rect x="216" y="140" width="304" height="60" rx="6" fill="#1e293b" opacity="0.6" />
+  <text x="226" y="156" fill="#94a3b8" font-family="monospace" font-size="9.5">BP: 128/82 mmHg | SpO2: 98% | Temp: 98.4F</text>
+  <text x="226" y="172" fill="#94a3b8" font-family="monospace" font-size="9.5">Prior Rx: Metformin 500mg, Atorvastatin 10mg</text>
+  <text x="226" y="188" fill="#94a3b8" font-family="monospace" font-size="9.5">Nurse Note: Patient reports mild dizziness on mornings</text>
+
+  <!-- AI Summary Pill -->
+  <rect x="216" y="210" width="304" height="64" rx="6" fill="#064e3b" stroke="#10b981" stroke-width="1.5" />
+  <circle cx="232" cy="225" r="5" fill="#10b981" />
+  <text x="244" y="228" fill="#6ee7b7" font-family="sans-serif" font-size="10" font-weight="bold">AI CLINICAL SUMMARY</text>
+  <text x="226" y="246" fill="#d1fae5" font-family="sans-serif" font-size="9.5">• Stable glycemic index; check dosage timing regarding dizziness.</text>
+  <text x="226" y="260" fill="#d1fae5" font-family="sans-serif" font-size="9.5">• Advise follow-up lipid panel &amp; hydration check.</text>
+</svg>
