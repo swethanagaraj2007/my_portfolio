@@ -4,6 +4,7 @@ const path = require('path');
 
 let port = parseInt(process.env.PORT, 10) || 3000;
 const HOST = '127.0.0.1';
+const ROOT_DIR = path.join(__dirname, '..');
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=UTF-8',
@@ -28,7 +29,7 @@ const server = http.createServer((req, res) => {
 
   // Prevent directory traversal
   const safePath = path.normalize(cleanUrl).replace(/^(\.\.[\/\\])+/, '');
-  const filePath = path.join(__dirname, safePath);
+  const filePath = path.join(ROOT_DIR, safePath);
 
   fs.stat(filePath, (err, stats) => {
     if (err || !stats.isFile()) {

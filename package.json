@@ -2,10 +2,9 @@
   "name": "swetha-developer-portfolio",
   "version": "1.0.0",
   "description": "Personal Developer Portfolio for Swetha N. (Computer Science & Design)",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js"
+    "start": "node scripts/dev-server.js",
+    "dev": "node scripts/dev-server.js"
   },
   "keywords": [
     "portfolio",
