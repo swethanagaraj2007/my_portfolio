@@ -1,74 +1,135 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
   <defs>
     <linearGradient id="smsBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e1b4b" />
-      <stop offset="50%" stop-color="#312e81" />
-      <stop offset="100%" stop-color="#0f172a" />
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="50%" stop-color="#111c38" />
+      <stop offset="100%" stop-color="#070b16" />
     </linearGradient>
-    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f97316" />
-      <stop offset="100%" stop-color="#ea580c" />
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
     </linearGradient>
+    <linearGradient id="emeraldBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
   </defs>
+
+  <!-- Canvas Background -->
   <rect width="600" height="360" rx="16" fill="url(#smsBg)" />
-  <!-- Window Header -->
-  <rect x="40" y="36" width="520" height="288" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
-  <rect x="40" y="36" width="520" height="40" rx="12" fill="#1e293b" />
-  <circle cx="64" cy="56" r="5" fill="#ef4444" /><circle cx="80" cy="56" r="5" fill="#f59e0b" /><circle cx="96" cy="56" r="5" fill="#10b981" />
-  <text x="300" y="61" fill="#94a3b8" font-family="monospace" font-size="12" text-anchor="middle">smart-sms-extension // manifest-v3</text>
 
-  <!-- LeetCode Problem & Streak Visual -->
-  <rect x="64" y="96" width="220" height="190" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" />
-  <rect x="80" y="112" width="70" height="18" rx="4" fill="url(#orangeGrad)" />
-  <text x="115" y="125" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">LeetCode</text>
-  <text x="80" y="150" fill="#f8fafc" font-family="sans-serif" font-size="13" font-weight="bold">500+ Solved</text>
-  <text x="80" y="168" fill="#94a3b8" font-family="sans-serif" font-size="10">Active Streak: 48 Days</text>
+  <!-- Outer Dashboard Window Container -->
+  <rect x="30" y="24" width="540" height="312" rx="12" fill="#0f172a" stroke="#1e293b" stroke-width="1.2" filter="url(#subtleShadow)" />
 
-  <!-- Heatmap grid representation -->
-  <g fill="#334155">
-    <rect x="80" y="185" width="14" height="14" rx="2" fill="#22c55e" />
-    <rect x="98" y="185" width="14" height="14" rx="2" fill="#16a34a" />
-    <rect x="116" y="185" width="14" height="14" rx="2" fill="#22c55e" />
-    <rect x="134" y="185" width="14" height="14" rx="2" fill="#15803d" />
-    <rect x="152" y="185" width="14" height="14" rx="2" fill="#4ade80" />
-    <rect x="170" y="185" width="14" height="14" rx="2" fill="#22c55e" />
-    <rect x="188" y="185" width="14" height="14" rx="2" fill="#16a34a" />
+  <!-- Top App Window Header -->
+  <rect x="30" y="24" width="540" height="42" rx="12" fill="#141e33" />
+  <circle cx="54" cy="45" r="4.5" fill="#ef4444" opacity="0.8" />
+  <circle cx="70" cy="45" r="4.5" fill="#f59e0b" opacity="0.8" />
+  <circle cx="86" cy="45" r="4.5" fill="#10b981" opacity="0.8" />
 
-    <rect x="80" y="205" width="14" height="14" rx="2" fill="#15803d" />
-    <rect x="98" y="205" width="14" height="14" rx="2" fill="#22c55e" />
-    <rect x="116" y="205" width="14" height="14" rx="2" fill="#4ade80" />
-    <rect x="134" y="205" width="14" height="14" rx="2" fill="#16a34a" />
-    <rect x="152" y="205" width="14" height="14" rx="2" fill="#22c55e" />
-    <rect x="170" y="205" width="14" height="14" rx="2" fill="#15803d" />
-    <rect x="188" y="205" width="14" height="14" rx="2" fill="#22c55e" />
-
-    <rect x="80" y="225" width="14" height="14" rx="2" fill="#22c55e" />
-    <rect x="98" y="225" width="14" height="14" rx="2" fill="#4ade80" />
-    <rect x="116" y="225" width="14" height="14" rx="2" fill="#16a34a" />
-    <rect x="134" y="225" width="14" height="14" rx="2" fill="#22c55e" />
-    <rect x="152" y="225" width="14" height="14" rx="2" fill="#22c55e" />
-    <rect x="170" y="225" width="14" height="14" rx="2" fill="#15803d" />
-    <rect x="188" y="225" width="14" height="14" rx="2" fill="#86efac" />
-  </g>
-  <text x="80" y="260" fill="#38bdf8" font-family="monospace" font-size="9">Synced via MV3 Worker</text>
-
-  <!-- Right: Extension popup mock -->
-  <rect x="304" y="96" width="232" height="190" rx="8" fill="#18181b" stroke="#6366f1" stroke-width="1.2" />
-  <rect x="304" y="96" width="232" height="28" rx="8" fill="#27272a" />
-  <text x="320" y="115" fill="#e4e4e7" font-family="sans-serif" font-size="11" font-weight="bold">Smart SMS Tracker</text>
+  <text x="300" y="49" fill="#94a3b8" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle" letter-spacing="0.5">SMART SMS PLATFORM &bull; DJANGO REST BACKEND</text>
   
-  <rect x="320" y="136" width="200" height="34" rx="6" fill="#27272a" />
-  <text x="330" y="152" fill="#a1a1aa" font-family="monospace" font-size="9.5">Current Problem:</text>
-  <text x="330" y="164" fill="#67e8f9" font-family="monospace" font-size="9.5">LRU Cache [Medium] - Passed</text>
+  <rect x="470" y="34" width="84" height="22" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="512" y="49" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" text-anchor="middle">v1.2.0 API</text>
 
-  <rect x="320" y="180" width="95" height="42" rx="6" fill="#3b0764" />
-  <text x="367" y="198" fill="#d8b4fe" font-family="sans-serif" font-size="9" text-anchor="middle">Trees / Graphs</text>
-  <text x="367" y="214" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">142</text>
+  <!-- Left Column: Delivery Engine & Live SMS Pipeline (245px width) -->
+  <g transform="translate(48, 80)">
+    <!-- Delivery Stream Card -->
+    <rect width="235" height="236" rx="10" fill="#111a2e" stroke="#1e293b" stroke-width="1" />
+    
+    <!-- Header -->
+    <text x="16" y="24" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700">Messaging Engine</text>
+    <rect x="156" y="12" width="64" height="18" rx="4" fill="rgba(59, 130, 246, 0.15)" stroke="rgba(59, 130, 246, 0.3)" stroke-width="1" />
+    <text x="188" y="24" fill="#60a5fa" font-family="sans-serif" font-size="9" font-weight="600" text-anchor="middle">Live Queue</text>
 
-  <rect x="425" y="180" width="95" height="42" rx="6" fill="#1e1b4b" />
-  <text x="472" y="198" fill="#a5b4fc" font-family="sans-serif" font-size="9" text-anchor="middle">Dynamic Prog</text>
-  <text x="472" y="214" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">98</text>
+    <!-- Message Item 1: Delivered -->
+    <g transform="translate(14, 40)">
+      <rect width="207" height="48" rx="7" fill="#18233c" stroke="#253352" stroke-width="0.8" />
+      <circle cx="16" cy="24" r="5" fill="#10b981" />
+      <text x="30" y="20" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">+91 98*** 4210</text>
+      <text x="30" y="35" fill="#64748b" font-family="sans-serif" font-size="8.5">Auth OTP Token &bull; Delivered</text>
+      <rect x="155" y="16" width="42" height="16" rx="4" fill="rgba(16, 185, 129, 0.15)" />
+      <text x="176" y="28" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" text-anchor="middle">200 OK</text>
+    </g>
 
-  <rect x="320" y="234" width="200" height="28" rx="6" fill="#4338ca" />
-  <text x="420" y="252" fill="#ffffff" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Sync with DB Dashboard</text>
+    <!-- Message Item 2: Scheduled Broadcast -->
+    <g transform="translate(14, 96)">
+      <rect width="207" height="48" rx="7" fill="#18233c" stroke="#253352" stroke-width="0.8" />
+      <circle cx="16" cy="24" r="5" fill="#3b82f6" />
+      <text x="30" y="20" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">Cohort Group (84)</text>
+      <text x="30" y="35" fill="#64748b" font-family="sans-serif" font-size="8.5">Template Broadcast &bull; Sent</text>
+      <rect x="155" y="16" width="42" height="16" rx="4" fill="rgba(59, 130, 246, 0.15)" />
+      <text x="176" y="28" fill="#60a5fa" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" text-anchor="middle">QUEUE</text>
+    </g>
+
+    <!-- Message Item 3: Retry / Webhook -->
+    <g transform="translate(14, 152)">
+      <rect width="207" height="48" rx="7" fill="#18233c" stroke="#253352" stroke-width="0.8" />
+      <circle cx="16" cy="24" r="5" fill="#f59e0b" />
+      <text x="30" y="20" fill="#f1f5f9" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600">+91 94*** 8832</text>
+      <text x="30" y="35" fill="#64748b" font-family="sans-serif" font-size="8.5">Carrier Webhook &bull; Retrying (1)</text>
+      <rect x="155" y="16" width="42" height="16" rx="4" fill="rgba(245, 158, 11, 0.15)" />
+      <text x="176" y="28" fill="#fbbf24" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" text-anchor="middle">RETRY</text>
+    </g>
+
+    <!-- Mini stats footer -->
+    <text x="16" y="222" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="8.5">Success Rate: 99.4% &bull; Webhooks Active</text>
+  </g>
+
+  <!-- Right Column: Architecture & Core Services (255px width) -->
+  <g transform="translate(300, 80)">
+    <rect width="250" height="236" rx="10" fill="#111a2e" stroke="#1e293b" stroke-width="1" />
+
+    <!-- Header -->
+    <text x="16" y="24" fill="#f8fafc" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700">Platform Services</text>
+    <rect x="160" y="12" width="76" height="18" rx="4" fill="rgba(99, 102, 241, 0.15)" stroke="rgba(99, 102, 241, 0.3)" stroke-width="1" />
+    <text x="198" y="24" fill="#a5b4fc" font-family="sans-serif" font-size="9" font-weight="600" text-anchor="middle">Architecture</text>
+
+    <!-- Node 1: Auth Module -->
+    <g transform="translate(14, 40)">
+      <rect width="222" height="38" rx="6" fill="#162238" stroke="#253352" stroke-width="0.8" />
+      <rect x="10" y="9" width="20" height="20" rx="4" fill="rgba(59, 130, 246, 0.2)" />
+      <text x="20" y="23" fill="#60a5fa" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">A</text>
+      <text x="38" y="20" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">OTP &amp; JWT Security</text>
+      <text x="38" y="32" fill="#64748b" font-family="sans-serif" font-size="8">Role-based token validation</text>
+    </g>
+
+    <!-- Node 2: Contact Directory -->
+    <g transform="translate(14, 86)">
+      <rect width="222" height="38" rx="6" fill="#162238" stroke="#253352" stroke-width="0.8" />
+      <rect x="10" y="9" width="20" height="20" rx="4" fill="rgba(99, 102, 241, 0.2)" />
+      <text x="20" y="23" fill="#a5b4fc" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">C</text>
+      <text x="38" y="20" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">Contact Groups &amp; Directory</text>
+      <text x="38" y="32" fill="#64748b" font-family="sans-serif" font-size="8">Bulk segmentation &amp; search</text>
+    </g>
+
+    <!-- Node 3: Delivery Webhooks & Audit -->
+    <g transform="translate(14, 132)">
+      <rect width="222" height="38" rx="6" fill="#162238" stroke="#253352" stroke-width="0.8" />
+      <rect x="10" y="9" width="20" height="20" rx="4" fill="rgba(6, 182, 212, 0.2)" />
+      <text x="20" y="23" fill="#22d3ee" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">D</text>
+      <text x="38" y="20" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">Delivery Status Webhooks</text>
+      <text x="38" y="32" fill="#64748b" font-family="sans-serif" font-size="8">Real-time callbacks &amp; audit trail</text>
+    </g>
+
+    <!-- Tech Badges Pill Row -->
+    <g transform="translate(14, 184)">
+      <rect x="0" y="0" width="56" height="22" rx="11" fill="rgba(59, 130, 246, 0.12)" stroke="rgba(59, 130, 246, 0.25)" stroke-width="0.8" />
+      <text x="28" y="14" fill="#93c5fd" font-family="sans-serif" font-size="9" font-weight="600" text-anchor="middle">Django</text>
+
+      <rect x="62" y="0" width="48" height="22" rx="11" fill="rgba(99, 102, 241, 0.12)" stroke="rgba(99, 102, 241, 0.25)" stroke-width="0.8" />
+      <text x="86" y="14" fill="#c7d2fe" font-family="sans-serif" font-size="9" font-weight="600" text-anchor="middle">DRF</text>
+
+      <rect x="116" y="0" width="48" height="22" rx="11" fill="rgba(16, 185, 129, 0.12)" stroke="rgba(16, 185, 129, 0.25)" stroke-width="0.8" />
+      <text x="140" y="14" fill="#6ee7b7" font-family="sans-serif" font-size="9" font-weight="600" text-anchor="middle">JWT</text>
+
+      <rect x="170" y="0" width="52" height="22" rx="11" fill="rgba(245, 158, 11, 0.12)" stroke="rgba(245, 158, 11, 0.25)" stroke-width="0.8" />
+      <text x="196" y="14" fill="#fde68a" font-family="sans-serif" font-size="9" font-weight="600" text-anchor="middle">Postgres</text>
+    </g>
+
+    <text x="16" y="222" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="8.5">REST APIs &bull; Asynchronous Worker Queue</text>
+  </g>
 </svg>

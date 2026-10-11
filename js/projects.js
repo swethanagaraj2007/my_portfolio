@@ -84,39 +84,42 @@ const portfolioProjects = [
   },
   {
     id: "smart-sms",
-    title: "Smart SMS — LeetCode Activity Tracker",
-    tagline: "Chrome extension with backend analytics to track LeetCode problem-solving consistency, tags, and progress.",
+    title: "Smart SMS — Communication & Contact Platform",
+    tagline: "A modular Django-based SMS management system designed for secure messaging, contact organization, delivery tracking, and user authentication.",
     featured: true,
-    category: "tools",
-    badge: "Browser Extension",
+    category: "fullstack",
+    badge: "Django Backend & REST Platform",
     thumbnail: "assets/images/project-smart-sms.svg",
     stats: [
-      { label: "Platform", value: "Chrome MV3" },
-      { label: "Target", value: "LeetCode Activity" },
-      { label: "Backend", value: "Node / DB" }
+      { label: "Backend", value: "Django + DRF" },
+      { label: "Security", value: "OTP + JWT" },
+      { label: "Delivery", value: "Status Webhooks" }
     ],
     technologies: [
-      "JavaScript (ES6+)",
-      "Chrome Extensions Manifest V3",
-      "Node.js",
+      "Python",
+      "Django",
+      "Django REST Framework",
+      "JWT Authentication",
       "PostgreSQL / SQLite",
-      "REST APIs"
+      "RESTful APIs",
+      "Webhooks & Callbacks"
     ],
-    shortDesc: "A developer tool that runs right in the browser, tracking problem-solving sessions on LeetCode, recording difficulty distribution, and syncing with a centralized database for streak monitoring.",
-    contribution: "Built the Manifest V3 content scripts, background service workers, and backend API integration to log submissions without interfering with the user's coding workflow.",
-    githubUrl: "https://github.com/swethanagaraj2007",
+    shortDesc: "Scalable backend platform enabling organizations to manage SMS communications efficiently through OTP authentication, contact management, delivery tracking, and messaging workflows.",
+    contribution: "Co-developed the backend architecture, designed RESTful endpoints for OTP authentication and JWT authorization, implemented contact directory models, and developed webhook delivery tracking with automated retries.",
+    githubUrl: "https://github.com/ClassyMuhi/smart-sms",
     liveUrl: "",
-    liveUrlLabel: "Web Store (Upcoming)",
+    liveUrlLabel: "Repository",
     caseStudy: {
-      problemStatement: "DSA practitioners practicing on LeetCode frequently lose sight of topic-wise blind spots, daily streaks, and revision intervals across varied algorithm patterns.",
+      problemStatement: "Organizations frequently lack a unified, secure backend infrastructure to coordinate high-volume transactional and broadcast SMS communications, organize contact directories into dynamic groups, and track real-time delivery status.",
       architecture: [
-        "Content Script Observer: Non-intrusive DOM listeners and network event hooks detecting successful problem submissions.",
-        "Background Service Worker: Manifest V3 worker managing state, authentication, and secure token storage.",
-        "Backend Ingestion: Express REST API receiving submission metadata (difficulty, runtime, tags) and storing it in a relational DB.",
-        "Popup Analytics: Interactive popup displaying weekly activity heatmaps, topic breakdowns, and spaced repetition alerts."
+        "User Authentication: Multi-step authentication flow with OTP verification and stateless JWT-secured sessions for all API requests.",
+        "Messaging Engine: Dispatcher handling message generation, template variable injection, scheduled messaging, and retry logic.",
+        "Contact Management: Granular directory services organizing contacts into custom groups with bulk operations and high-speed search.",
+        "Delivery Tracking: Real-time webhook listeners capturing carrier delivery receipts (Delivered, Failed, Queued) with audit logging.",
+        "REST API Services: Clean, documented endpoints built with Django REST Framework adhering to strict REST standards."
       ],
-      keyChallenges: "Handling dynamic single-page application (SPA) routing in LeetCode's modernized UI and complying with Chrome Manifest V3's strict service worker lifecycle constraints.",
-      whatILearned: "Deepened knowledge of browser extension security architecture, asynchronous message passing, client-side caching, and API contract design."
+      keyChallenges: "Managing asynchronous carrier webhook callbacks without data duplication, structuring database indexes for fast contact lookups, and enforcing robust JWT token expiration safeguards.",
+      whatILearned: "Deepened expertise in enterprise Django and Django REST Framework architecture, asynchronous webhook processing, relational schema normalization, and collaborative software engineering."
     }
   },
   {

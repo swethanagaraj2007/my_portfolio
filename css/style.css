@@ -10,37 +10,40 @@
   /* Color Scheme declaration for native elements */
   color-scheme: dark;
 
-  /* Dark Theme Tokens (Default) */
-  --bg-primary: #090d16;
-  --bg-secondary: #0f172a;
-  --bg-card: #131c31;
-  --bg-card-hover: #1a2744;
-  --bg-card-glass: rgba(19, 28, 49, 0.75);
-  --bg-header: rgba(9, 13, 22, 0.85);
+  /* Dark Theme Tokens (Refined Midnight Editorial) */
+  --bg-primary: #070a13;
+  --bg-secondary: #0b1120;
+  --bg-card: #0f172a;
+  --bg-card-hover: #162038;
+  --bg-card-glass: rgba(15, 23, 42, 0.75);
+  --bg-header: rgba(7, 10, 19, 0.88);
 
-  --border-subtle: #1e293b;
-  --border-focus: #6366f1;
-  --border-highlight: rgba(99, 102, 241, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: #1e293b;
+  --border-focus: #3b82f6;
+  --border-highlight: rgba(59, 130, 246, 0.35);
 
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
   --text-muted: #94a3b8;
-  --text-inverse: #090d16;
+  --text-inverse: #070a13;
 
   /* Accent Colors */
-  --accent-primary: #6366f1;       /* Indigo */
-  --accent-primary-hover: #4f46e5;
-  --accent-secondary: #06b6d4;     /* Cyan */
-  --accent-purple: #a855f7;        /* Purple */
+  --accent-primary: #3b82f6;       /* Electric Blue */
+  --accent-primary-hover: #2563eb;
+  --accent-secondary: #6366f1;     /* Indigo */
+  --accent-purple: #8b5cf6;        /* Violet */
   --accent-emerald: #10b981;       /* Emerald */
-  --accent-orange: #f97316;        /* Orange */
+  --accent-cyan: #06b6d4;          /* Cyan */
+  --accent-orange: #f59e0b;        /* Amber */
 
-  --gradient-accent: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #06b6d4 100%);
-  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+  --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
+  --gradient-glow: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
 
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-heading: 'Outfit', var(--font-sans);
+  --font-heading: 'Plus Jakarta Sans', 'Outfit', var(--font-sans);
+  --font-serif: 'Instrument Serif', Georgia, serif;
   --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   /* Radii & Shadows */
@@ -153,6 +156,18 @@ a {
   color: inherit;
   text-decoration: none;
   transition: color var(--transition-fast);
+}
+
+.serif-accent {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: -0.01em;
+}
+
+html[data-theme="light"] .serif-accent {
+  color: rgba(15, 23, 42, 0.95);
 }
 
 button, input, textarea {
