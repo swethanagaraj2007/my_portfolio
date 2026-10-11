@@ -6,21 +6,23 @@ from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.enum.shapes import MSO_SHAPE
 
 # ==============================================================================
-# PREMIUM EDITORIAL COLOR PALETTE & DESIGN SYSTEM
+# PREMIUM EDITORIAL STUDIO LIGHT THEME FOR PPT
 # ==============================================================================
-BG_DARK = RGBColor(11, 15, 25)         # #0B0F19 - Deep Midnight Navy
-SURFACE = RGBColor(17, 24, 39)         # #111827 - Elevated Surface
-SURFACE_LIGHT = RGBColor(24, 33, 53)   # #182135 - Subtle card fill
-BORDER_SUBTLE = RGBColor(31, 41, 55)   # #1F2937 - Minimal Divider
-BORDER_MUTED = RGBColor(45, 55, 72)
+BG_SLIDE = RGBColor(248, 250, 252)      # #F8FAFC - Clean Architectural Off-White Canvas
+SURFACE = RGBColor(255, 255, 255)       # #FFFFFF - Crisp Pure White Card
+SURFACE_LIGHT = RGBColor(241, 245, 249) # #F1F5F9 - Subtle Neutral Container
+SURFACE_TINT = RGBColor(238, 242, 255)  # #EEF2FF - Soft Indigo Tint
+BORDER_SUBTLE = RGBColor(226, 232, 240) # #E2E8F0 - Refined Hairline Divider
+BORDER_MUTED = RGBColor(203, 213, 225)  # #CBD5E1 - Structural Card Border
 
-ACCENT_BLUE = RGBColor(56, 189, 248)   # #38BDF8 - Sky Cyan
-ACCENT_INDIGO = RGBColor(99, 102, 241) # #6366F1 - Electric Indigo
-ACCENT_EMERALD = RGBColor(16, 185, 129)# #10B981 - Muted Mint
+ACCENT_BLUE = RGBColor(37, 99, 235)     # #2563EB - Royal Tech Blue
+ACCENT_INDIGO = RGBColor(79, 70, 229)   # #4F46E5 - Electric Indigo
+ACCENT_EMERALD = RGBColor(5, 150, 105)  # #059669 - Forest Mint
+ACCENT_PURPLE = RGBColor(124, 58, 237)  # #7C3AED - Royal Violet
 
-TEXT_PRIMARY = RGBColor(248, 250, 252) # #F8FAFC - Warm Pure White
-TEXT_SECONDARY = RGBColor(148, 163, 184)# #94A3B8 - Slate Silver
-TEXT_MUTED = RGBColor(100, 116, 139)   # #64748B - Subtle Caption
+TEXT_PRIMARY = RGBColor(15, 23, 42)     # #0F172A - Deep Charcoal Ink (Maximum Contrast)
+TEXT_SECONDARY = RGBColor(51, 65, 85)   # #334155 - Slate Grey Body
+TEXT_MUTED = RGBColor(100, 116, 139)    # #64748B - Subtle Caption
 
 SCREENSHOTS_DIR = os.path.join(os.path.dirname(__file__), '..', 'presentation', 'screenshots')
 OUTPUT_PATH = os.path.join(os.path.dirname(__file__), '..', 'presentation', 'Swetha_Portfolio_Presentation.pptx')
@@ -30,7 +32,7 @@ prs.slide_width = Inches(13.333)
 prs.slide_height = Inches(7.5)
 blank_layout = prs.slide_layouts[6]
 
-def set_slide_background(slide, color=BG_DARK):
+def set_slide_background(slide, color=BG_SLIDE):
     bg = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, Inches(13.333), Inches(7.5))
     bg.fill.solid()
     bg.fill.fore_color.rgb = color
@@ -163,10 +165,10 @@ if os.path.exists(hero_img_path):
     live_badge = slide1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(6.9), Inches(5.9), Inches(5.433), Inches(0.55))
     live_badge.fill.solid()
     live_badge.fill.fore_color.rgb = SURFACE_LIGHT
-    live_badge.line.color.rgb = ACCENT_EMERALD
+    live_badge.line.color.rgb = BORDER_SUBTLE
     live_badge.line.width = Pt(1)
     p_b = live_badge.text_frame.paragraphs[0]
-    p_b.text = "● Live Build: my-portfolio-nine-psi-98.vercel.app"
+    p_b.text = "● Live Build: my-portfolio-swethanagaraj2007s-projects.vercel.app"
     p_b.font.size = Pt(10)
     p_b.font.bold = True
     p_b.font.color.rgb = ACCENT_EMERALD
@@ -184,7 +186,7 @@ add_header(slide2, "Core Philosophy", "The Problem & The Purpose",
 # Top Half: High-Impact Problem Statement Card
 prob_card = slide2.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.9), Inches(1.9), Inches(11.533), Inches(1.6))
 prob_card.fill.solid()
-prob_card.fill.fore_color.rgb = SURFACE
+prob_card.fill.fore_color.rgb = SURFACE_TINT
 prob_card.line.color.rgb = ACCENT_INDIGO
 prob_card.line.width = Pt(1.5)
 
@@ -194,7 +196,7 @@ p = tf_p.paragraphs[0]
 p.text = "THE PROBLEM"
 p.font.size = Pt(10)
 p.font.bold = True
-p.font.color.rgb = ACCENT_BLUE
+p.font.color.rgb = ACCENT_INDIGO
 p.font.name = "Outfit"
 
 p2 = tf_p.add_paragraph()
@@ -380,7 +382,7 @@ tech_quads = [
         "Theme persistence controller with localStorage synchronization",
         "Active scroll-spy navigation listener & Quick View modal logic"
     ]),
-    ("04 · Infrastructure", "Git, GitHub & Vercel", RGBColor(168, 85, 247), [
+    ("04 · Infrastructure", "Git, GitHub & Vercel", ACCENT_PURPLE, [
         "Production version control on GitHub main branch",
         "Automated continuous deployment via Vercel Edge CDN",
         "Zero build-step pipeline ensuring instantaneous deployments"
@@ -572,7 +574,7 @@ for title, desc in scope_pts:
 # Final Thank You Box
 thx_box = slide6.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(7.1), Inches(4.6), Inches(5.033), Inches(1.8))
 thx_box.fill.solid()
-thx_box.fill.fore_color.rgb = SURFACE_LIGHT
+thx_box.fill.fore_color.rgb = SURFACE_TINT
 thx_box.line.color.rgb = ACCENT_INDIGO
 thx_box.line.width = Pt(1.5)
 
@@ -599,7 +601,7 @@ p_sig1.space_before = Pt(4)
 p_sig2 = tf_thx.add_paragraph()
 p_sig2.text = "Rajalakshmi Engineering College · Chennai"
 p_sig2.font.size = Pt(10.5)
-p_sig2.font.color.rgb = TEXT_MUTED
+p_sig2.font.color.rgb = TEXT_SECONDARY
 p_sig2.font.name = "Inter"
 p_sig2.alignment = PP_ALIGN.CENTER
 

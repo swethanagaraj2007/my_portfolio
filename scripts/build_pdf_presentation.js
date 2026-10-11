@@ -43,7 +43,8 @@ const htmlContent = `<!DOCTYPE html>
       width: 1920px;
       height: 1080px;
       padding: 80px 100px;
-      background: #0b0f19;
+      background: #f8fafc;
+      color: #0f172a;
       position: relative;
       overflow: hidden;
       page-break-after: always;
@@ -63,7 +64,7 @@ const htmlContent = `<!DOCTYPE html>
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #6366f1;
+      color: #4f46e5;
       margin-bottom: 12px;
     }
 
@@ -71,23 +72,24 @@ const htmlContent = `<!DOCTYPE html>
       font-family: 'Outfit', sans-serif;
       font-size: 44px;
       font-weight: 800;
-      color: #f8fafc;
+      color: #0f172a;
       line-height: 1.15;
       margin-bottom: 8px;
     }
 
     .slide-subtitle {
       font-size: 20px;
-      color: #94a3b8;
+      color: #475569;
       font-weight: 400;
     }
 
     .card {
-      background: #111827;
-      border: 1px solid #1f2937;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
       border-radius: 18px;
       padding: 36px;
       position: relative;
+      box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.04);
     }
 
     .slide-footer {
@@ -98,7 +100,7 @@ const htmlContent = `<!DOCTYPE html>
       color: #64748b;
       font-family: 'JetBrains Mono', monospace;
       padding-top: 20px;
-      border-top: 1px solid #1a2234;
+      border-top: 1px solid #e2e8f0;
     }
 
     /* SLIDE 1: COVER */
@@ -111,21 +113,22 @@ const htmlContent = `<!DOCTYPE html>
     }
 
     .s1-left {
-      background: #111827;
-      border: 1px solid #1f2937;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
       border-radius: 24px;
       padding: 60px;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      box-shadow: 0 12px 30px -5px rgba(15, 23, 42, 0.05);
     }
 
     .s1-h1 {
       font-family: 'Outfit', sans-serif;
       font-size: 54px;
       font-weight: 800;
-      color: #f8fafc;
+      color: #0f172a;
       line-height: 1.1;
       margin-top: 16px;
       margin-bottom: 20px;
@@ -133,12 +136,12 @@ const htmlContent = `<!DOCTYPE html>
 
     .s1-sub {
       font-size: 20px;
-      color: #94a3b8;
+      color: #475569;
       line-height: 1.5;
     }
 
     .s1-meta {
-      border-top: 1px solid #1f2937;
+      border-top: 1px solid #e2e8f0;
       padding-top: 28px;
     }
 
@@ -146,32 +149,33 @@ const htmlContent = `<!DOCTYPE html>
       font-family: 'Outfit', sans-serif;
       font-size: 26px;
       font-weight: 700;
-      color: #f8fafc;
+      color: #0f172a;
       margin-bottom: 6px;
     }
 
     .s1-detail {
       font-size: 16px;
-      color: #94a3b8;
+      color: #475569;
       line-height: 1.4;
     }
 
     .s1-college {
       font-size: 16px;
-      color: #38bdf8;
-      font-weight: 500;
+      color: #2563eb;
+      font-weight: 600;
       margin-top: 4px;
     }
 
     .s1-right {
-      background: #111827;
-      border: 1px solid #1f2937;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
       border-radius: 24px;
       padding: 16px;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      box-shadow: 0 12px 30px -5px rgba(15, 23, 42, 0.05);
     }
 
     .s1-img {
@@ -179,26 +183,26 @@ const htmlContent = `<!DOCTYPE html>
       height: 760px;
       object-fit: cover;
       border-radius: 16px;
-      border: 1px solid #243046;
+      border: 1px solid #cbd5e1;
     }
 
     .s1-badge {
-      background: #182135;
-      border: 1px solid #10b981;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
       border-radius: 12px;
       padding: 14px;
       text-align: center;
       font-family: 'JetBrains Mono', monospace;
       font-size: 14px;
       font-weight: 600;
-      color: #10b981;
+      color: #059669;
       margin-top: 14px;
     }
 
     /* SLIDE 2: THE IDEA & OBJECTIVE */
     .s2-problem {
-      background: #111827;
-      border: 1px solid #6366f1;
+      background: #eef2ff;
+      border: 1.5px solid #4f46e5;
       border-radius: 20px;
       padding: 36px 44px;
       margin-bottom: 36px;
@@ -208,7 +212,7 @@ const htmlContent = `<!DOCTYPE html>
       font-family: 'JetBrains Mono', monospace;
       font-size: 13px;
       font-weight: 700;
-      color: #38bdf8;
+      color: #4f46e5;
       letter-spacing: 0.1em;
       margin-bottom: 8px;
     }
@@ -217,13 +221,13 @@ const htmlContent = `<!DOCTYPE html>
       font-family: 'Outfit', sans-serif;
       font-size: 26px;
       font-weight: 700;
-      color: #f8fafc;
+      color: #0f172a;
       margin-bottom: 8px;
     }
 
     .s2-prob-desc {
       font-size: 18px;
-      color: #94a3b8;
+      color: #334155;
     }
 
     .s2-grid {
@@ -233,11 +237,12 @@ const htmlContent = `<!DOCTYPE html>
     }
 
     .s2-card {
-      background: #111827;
-      border: 1px solid #1f2937;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
       border-radius: 18px;
       padding: 36px;
       position: relative;
+      box-shadow: 0 6px 20px -4px rgba(15, 23, 42, 0.04);
     }
 
     .s2-card::before {
@@ -250,9 +255,9 @@ const htmlContent = `<!DOCTYPE html>
       border-radius: 18px 18px 0 0;
     }
 
-    .s2-c1::before { background: #6366f1; }
-    .s2-c2::before { background: #10b981; }
-    .s2-c3::before { background: #38bdf8; }
+    .s2-c1::before { background: #4f46e5; }
+    .s2-c2::before { background: #059669; }
+    .s2-c3::before { background: #2563eb; }
 
     .s2-num {
       font-family: 'JetBrains Mono', monospace;
@@ -265,13 +270,13 @@ const htmlContent = `<!DOCTYPE html>
       font-family: 'Outfit', sans-serif;
       font-size: 22px;
       font-weight: 700;
-      color: #f8fafc;
+      color: #0f172a;
       margin-bottom: 12px;
     }
 
     .s2-p {
       font-size: 16px;
-      color: #94a3b8;
+      color: #475569;
       line-height: 1.55;
     }
 
@@ -284,22 +289,23 @@ const htmlContent = `<!DOCTYPE html>
     }
 
     .s3-step {
-      background: #111827;
-      border: 1px solid #1f2937;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
       border-radius: 14px;
       padding: 24px 18px;
       text-align: center;
+      box-shadow: 0 4px 12px -2px rgba(15, 23, 42, 0.03);
     }
 
     .s3-step.active {
-      border-color: #6366f1;
-      background: #182135;
+      border-color: #4f46e5;
+      background: #f5f3ff;
     }
 
     .s3-step-num {
       font-family: 'JetBrains Mono', monospace;
       font-size: 13px;
-      color: #38bdf8;
+      color: #2563eb;
       font-weight: 700;
       margin-bottom: 6px;
     }
@@ -308,13 +314,13 @@ const htmlContent = `<!DOCTYPE html>
       font-family: 'Outfit', sans-serif;
       font-size: 18px;
       font-weight: 700;
-      color: #f8fafc;
+      color: #0f172a;
       margin-bottom: 4px;
     }
 
     .s3-step-sub {
       font-size: 13px;
-      color: #94a3b8;
+      color: #64748b;
     }
 
     .s3-ux-grid {
@@ -333,20 +339,21 @@ const htmlContent = `<!DOCTYPE html>
     }
 
     .s4-card {
-      background: #111827;
-      border: 1px solid #1f2937;
-      border-left: 5px solid #6366f1;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 5px solid #4f46e5;
       border-radius: 18px;
       padding: 36px 40px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      box-shadow: 0 6px 20px -4px rgba(15, 23, 42, 0.04);
     }
 
-    .s4-c1 { border-left-color: #10b981; }
-    .s4-c2 { border-left-color: #38bdf8; }
-    .s4-c3 { border-left-color: #6366f1; }
-    .s4-c4 { border-left-color: #a855f7; }
+    .s4-c1 { border-left-color: #059669; }
+    .s4-c2 { border-left-color: #2563eb; }
+    .s4-c3 { border-left-color: #4f46e5; }
+    .s4-c4 { border-left-color: #7c3aed; }
 
     .s4-tag {
       font-family: 'JetBrains Mono', monospace;
@@ -359,7 +366,7 @@ const htmlContent = `<!DOCTYPE html>
       font-family: 'Outfit', sans-serif;
       font-size: 26px;
       font-weight: 700;
-      color: #f8fafc;
+      color: #0f172a;
       margin-bottom: 14px;
     }
 
@@ -369,7 +376,7 @@ const htmlContent = `<!DOCTYPE html>
       flex-direction: column;
       gap: 8px;
       font-size: 16px;
-      color: #cbd5e1;
+      color: #334155;
     }
 
     .s4-list li::before {
@@ -386,13 +393,14 @@ const htmlContent = `<!DOCTYPE html>
     }
 
     .s5-item {
-      background: #111827;
-      border: 1px solid #1f2937;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
       border-radius: 20px;
       padding: 24px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.04);
     }
 
     .s5-img {
@@ -400,7 +408,8 @@ const htmlContent = `<!DOCTYPE html>
       height: 500px;
       object-fit: cover;
       border-radius: 12px;
-      border: 1px solid #243046;
+      border: 1px solid #cbd5e1;
+      background: #070a13;
     }
 
     .s5-cap {
@@ -411,13 +420,13 @@ const htmlContent = `<!DOCTYPE html>
       font-family: 'Outfit', sans-serif;
       font-size: 22px;
       font-weight: 700;
-      color: #38bdf8;
+      color: #2563eb;
       margin-bottom: 6px;
     }
 
     .s5-desc {
       font-size: 16px;
-      color: #94a3b8;
+      color: #475569;
       line-height: 1.4;
     }
 
@@ -430,13 +439,14 @@ const htmlContent = `<!DOCTYPE html>
     }
 
     .s6-card {
-      background: #111827;
-      border: 1px solid #1f2937;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
       border-radius: 20px;
       padding: 44px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.04);
     }
 
     .s6-h {
@@ -455,19 +465,19 @@ const htmlContent = `<!DOCTYPE html>
       font-family: 'Outfit', sans-serif;
       font-size: 20px;
       font-weight: 700;
-      color: #f8fafc;
+      color: #0f172a;
       margin-bottom: 4px;
     }
 
     .s6-item-d {
       font-size: 16px;
-      color: #94a3b8;
+      color: #475569;
       line-height: 1.45;
     }
 
     .s6-thx {
-      background: #182135;
-      border: 1px solid #6366f1;
+      background: #eef2ff;
+      border: 1.5px solid #4f46e5;
       border-radius: 16px;
       padding: 30px;
       text-align: center;
@@ -478,14 +488,14 @@ const htmlContent = `<!DOCTYPE html>
       font-family: 'Outfit', sans-serif;
       font-size: 34px;
       font-weight: 800;
-      color: #f8fafc;
+      color: #0f172a;
       margin-bottom: 6px;
     }
 
     .s6-thx-name {
       font-size: 18px;
       font-weight: 600;
-      color: #38bdf8;
+      color: #2563eb;
       margin-bottom: 2px;
     }
 
@@ -516,7 +526,7 @@ const htmlContent = `<!DOCTYPE html>
 
       <div class="s1-right">
         <img class="s1-img" src="${heroImg}" alt="Portfolio Hero View">
-        <div class="s1-badge">● Live Production: my-portfolio-nine-psi-98.vercel.app</div>
+        <div class="s1-badge">● Live Production: my-portfolio-swethanagaraj2007s-projects.vercel.app</div>
       </div>
     </div>
   </div>
