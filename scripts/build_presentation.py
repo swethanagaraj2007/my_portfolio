@@ -14,6 +14,7 @@ SURFACE_LIGHT = RGBColor(241, 245, 249) # #F1F5F9 - Subtle Neutral Container
 SURFACE_TINT = RGBColor(238, 242, 255)  # #EEF2FF - Soft Indigo Tint
 BORDER_SUBTLE = RGBColor(226, 232, 240) # #E2E8F0 - Refined Hairline Divider
 BORDER_MUTED = RGBColor(203, 213, 225)  # #CBD5E1 - Structural Card Border
+BORDER_ACTIVE = RGBColor(147, 197, 253) # #93C5FD - Active highlight
 
 ACCENT_BLUE = RGBColor(37, 99, 235)     # #2563EB - Royal Tech Blue
 ACCENT_INDIGO = RGBColor(79, 70, 229)   # #4F46E5 - Electric Indigo
@@ -76,104 +77,107 @@ def add_header(slide, eyebrow, title, subtitle=None, top_offset=Inches(0.65)):
         sp.font.name = "Inter"
 
 # ==============================================================================
-# SLIDE 1: Striking Editorial Title Slide (Balanced Asymmetric Layout)
+# SLIDE 1: Striking Editorial Title Slide (Clean Keynote Layout, No Screenshot)
 # ==============================================================================
 slide1 = prs.slides.add_slide(blank_layout)
 set_slide_background(slide1)
 
-# Subtle background framing card for the left column
-left_card = slide1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.9), Inches(0.9), Inches(5.6), Inches(5.7))
-left_card.fill.solid()
-left_card.fill.fore_color.rgb = SURFACE
-left_card.line.color.rgb = BORDER_SUBTLE
-left_card.line.width = Pt(1)
+# Main Hero Card (Expansive, Elegant Studio Frame)
+hero_card = slide1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.9), Inches(0.85), Inches(11.533), Inches(5.8))
+hero_card.fill.solid()
+hero_card.fill.fore_color.rgb = SURFACE
+hero_card.line.color.rgb = BORDER_SUBTLE
+hero_card.line.width = Pt(1)
 
-# Eyebrow
-tb_eye = slide1.shapes.add_textbox(Inches(1.3), Inches(1.3), Inches(4.8), Inches(0.35))
-p = tb_eye.text_frame.paragraphs[0]
-p.text = "PORTFOLIO & TECHNICAL CAPSTONE"
-p.font.size = Pt(10)
-p.font.bold = True
-p.font.color.rgb = ACCENT_INDIGO
-p.font.name = "Outfit"
+# Eyebrow Pill
+eye_pill = slide1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(1.5), Inches(1.3), Inches(4.5), Inches(0.42))
+eye_pill.fill.solid()
+eye_pill.fill.fore_color.rgb = SURFACE_TINT
+eye_pill.line.color.rgb = BORDER_ACTIVE
+eye_pill.line.width = Pt(1)
+p_pill = eye_pill.text_frame.paragraphs[0]
+p_pill.text = "ACADEMIC CAPSTONE & TECHNICAL EVALUATION"
+p_pill.font.size = Pt(9.5)
+p_pill.font.bold = True
+p_pill.font.color.rgb = ACCENT_INDIGO
+p_pill.font.name = "JetBrains Mono"
+p_pill.alignment = PP_ALIGN.CENTER
 
-# Title
-tb_t = slide1.shapes.add_textbox(Inches(1.3), Inches(1.7), Inches(4.8), Inches(1.8))
+# Main Title
+tb_t = slide1.shapes.add_textbox(Inches(1.5), Inches(1.95), Inches(10.333), Inches(1.6))
 tf_t = tb_t.text_frame
 tf_t.word_wrap = True
 p = tf_t.paragraphs[0]
-p.text = "Personal Developer\nPortfolio Website"
-p.font.size = Pt(32)
+p.text = "Personal Developer Portfolio Website"
+p.font.size = Pt(38)
 p.font.bold = True
 p.font.color.rgb = TEXT_PRIMARY
 p.font.name = "Outfit"
 
 # Subtitle
-tb_sub = slide1.shapes.add_textbox(Inches(1.3), Inches(3.6), Inches(4.8), Inches(1.0))
+tb_sub = slide1.shapes.add_textbox(Inches(1.5), Inches(2.95), Inches(9.8), Inches(0.8))
 tf_sub = tb_sub.text_frame
 tf_sub.word_wrap = True
 p = tf_sub.paragraphs[0]
-p.text = "A digital showcase bridging Computer Science fundamentals with human-centered design."
-p.font.size = Pt(13)
+p.text = "A production-grade digital platform engineered with semantic web standards, applied RAG intelligence, and human-centered design principles."
+p.font.size = Pt(14)
 p.font.color.rgb = TEXT_SECONDARY
 p.font.name = "Inter"
 
-# Metadata Divider Line
-div = slide1.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(1.3), Inches(4.7), Inches(4.8), Inches(0.02))
+# Divider Line
+div = slide1.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(1.5), Inches(3.9), Inches(10.333), Inches(0.02))
 div.fill.solid()
 div.fill.fore_color.rgb = BORDER_SUBTLE
 div.line.fill.background()
 
-# Metadata Details
-tb_meta = slide1.shapes.add_textbox(Inches(1.3), Inches(4.85), Inches(4.8), Inches(1.4))
-tf_m = tb_meta.text_frame
-tf_m.word_wrap = True
+# Bottom 4-Column Metadata Grid
+meta_columns = [
+    ("PRESENTER", "Swetha N.", "B.E. Computer Science and Design", ACCENT_INDIGO),
+    ("INSTITUTION", "Rajalakshmi Eng. College", "Chennai · Class of 2028 (CGPA: 8.65)", ACCENT_BLUE),
+    ("CORE DOMAINS", "Backend & Applied AI", "RAG · Spring Boot · Django · Systems", ACCENT_EMERALD),
+    ("LIVE PLATFORM", "Verified Production CDN", "my-portfolio-...vercel.app", ACCENT_PURPLE)
+]
 
-p_name = tf_m.paragraphs[0]
-p_name.text = "Swetha N."
-p_name.font.size = Pt(15)
-p_name.font.bold = True
-p_name.font.color.rgb = TEXT_PRIMARY
-p_name.font.name = "Outfit"
-
-p_dept = tf_m.add_paragraph()
-p_dept.text = "B.E. Computer Science and Design (Class of 2028)"
-p_dept.font.size = Pt(11)
-p_dept.font.color.rgb = TEXT_SECONDARY
-p_dept.font.name = "Inter"
-
-p_coll = tf_m.add_paragraph()
-p_coll.text = "Rajalakshmi Engineering College, Chennai"
-p_coll.font.size = Pt(11)
-p_coll.font.color.rgb = ACCENT_BLUE
-p_coll.font.name = "Inter"
-
-# Right Side: Large Authentic Screenshot Visual
-hero_img_path = os.path.join(SCREENSHOTS_DIR, "01_hero.png")
-if os.path.exists(hero_img_path):
-    # Container frame with border
-    img_frame = slide1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(6.8), Inches(0.9), Inches(5.633), Inches(5.7))
-    img_frame.fill.solid()
-    img_frame.fill.fore_color.rgb = SURFACE
-    img_frame.line.color.rgb = BORDER_SUBTLE
-    img_frame.line.width = Pt(1)
+for i, (tag, val1, val2, col) in enumerate(meta_columns):
+    mx = Inches(1.5 + i * 2.65)
+    my = Inches(4.15)
     
-    # Real Screenshot embedded cleanly
-    slide1.shapes.add_picture(hero_img_path, Inches(6.9), Inches(1.0), Inches(5.433), Inches(4.7))
+    m_box = slide1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, mx, my, Inches(2.45), Inches(2.0))
+    m_box.fill.solid()
+    m_box.fill.fore_color.rgb = SURFACE_LIGHT
+    m_box.line.color.rgb = BORDER_SUBTLE
+    m_box.line.width = Pt(1)
     
-    # Bottom live indicator badge
-    live_badge = slide1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(6.9), Inches(5.9), Inches(5.433), Inches(0.55))
-    live_badge.fill.solid()
-    live_badge.fill.fore_color.rgb = SURFACE_LIGHT
-    live_badge.line.color.rgb = BORDER_SUBTLE
-    live_badge.line.width = Pt(1)
-    p_b = live_badge.text_frame.paragraphs[0]
-    p_b.text = "● Live Build: my-portfolio-swethanagaraj2007s-projects.vercel.app"
-    p_b.font.size = Pt(10)
-    p_b.font.bold = True
-    p_b.font.color.rgb = ACCENT_EMERALD
-    p_b.font.name = "JetBrains Mono"
-    p_b.alignment = PP_ALIGN.CENTER
+    # Colored top indicator
+    m_bar = slide1.shapes.add_shape(MSO_SHAPE.RECTANGLE, mx, my, Inches(2.45), Inches(0.04))
+    m_bar.fill.solid()
+    m_bar.fill.fore_color.rgb = col
+    m_bar.line.fill.background()
+    
+    tf_m = m_box.text_frame
+    tf_m.word_wrap = True
+    
+    p_tag = tf_m.paragraphs[0]
+    p_tag.text = tag
+    p_tag.font.size = Pt(9)
+    p_tag.font.bold = True
+    p_tag.font.color.rgb = col
+    p_tag.font.name = "JetBrains Mono"
+    
+    p_v1 = tf_m.add_paragraph()
+    p_v1.text = val1
+    p_v1.font.size = Pt(13)
+    p_v1.font.bold = True
+    p_v1.font.color.rgb = TEXT_PRIMARY
+    p_v1.font.name = "Outfit"
+    p_v1.space_before = Pt(6)
+    
+    p_v2 = tf_m.add_paragraph()
+    p_v2.text = val2
+    p_v2.font.size = Pt(9.5)
+    p_v2.font.color.rgb = TEXT_MUTED
+    p_v2.font.name = "Inter"
+    p_v2.space_before = Pt(4)
 
 # ==============================================================================
 # SLIDE 2: The Idea & Objective (5-Second Visual Hierarchy)
@@ -529,7 +533,7 @@ for title, desc in points_out:
     p_d.font.color.rgb = TEXT_SECONDARY
     p_d.font.name = "Inter"
 
-# Right Card: Future Scope & Confident Sign-off
+# Right Card: Future Scope & Roadmap
 future_card = slide6.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(6.8), Inches(1.9), Inches(5.633), Inches(4.8))
 future_card.fill.solid()
 future_card.fill.fore_color.rgb = SURFACE
@@ -545,25 +549,27 @@ tf_f = future_card.text_frame
 tf_f.word_wrap = True
 
 p = tf_f.paragraphs[0]
-p.text = "FUTURE ROADMAP"
+p.text = "FUTURE ENGINEERING ROADMAP"
 p.font.size = Pt(11)
 p.font.bold = True
 p.font.color.rgb = ACCENT_INDIGO
 p.font.name = "JetBrains Mono"
 
 scope_pts = [
-    ("Live LeetCode GraphQL Sync", "Dynamic pipeline updating active problem counts and streak heatmaps automatically."),
-    ("Interactive RAG Playground", "In-browser live demonstration of OpenAPI and YAML semantic vector retrieval.")
+    ("Live LeetCode & GitHub Sync", "Dynamic automated pipeline refreshing solved DSA milestones and live repo activity."),
+    ("Interactive Semantic RAG Playground", "In-browser live demonstration of OpenAPI and YAML semantic vector retrieval with LangChain."),
+    ("Automated Lighthouse CI Gates", "Continuous integration checks enforcing 98+ accessibility, performance, and SEO scores on commits."),
+    ("Ambient WebGL Micro-Interactions", "Subtle GPU-accelerated interactive canvas shaders for featured project case studies.")
 ]
 
 for title, desc in scope_pts:
     p_t = tf_f.add_paragraph()
     p_t.text = "→ " + title
-    p_t.font.size = Pt(12.5)
+    p_t.font.size = Pt(13)
     p_t.font.bold = True
     p_t.font.color.rgb = TEXT_PRIMARY
     p_t.font.name = "Outfit"
-    p_t.space_before = Pt(6)
+    p_t.space_before = Pt(8)
     
     p_d = tf_f.add_paragraph()
     p_d.text = desc
@@ -571,39 +577,135 @@ for title, desc in scope_pts:
     p_d.font.color.rgb = TEXT_SECONDARY
     p_d.font.name = "Inter"
 
-# Final Thank You Box
-thx_box = slide6.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(7.1), Inches(4.6), Inches(5.033), Inches(1.8))
-thx_box.fill.solid()
-thx_box.fill.fore_color.rgb = SURFACE_TINT
-thx_box.line.color.rgb = ACCENT_INDIGO
-thx_box.line.width = Pt(1.5)
+# ==============================================================================
+# SLIDE 7: Dedicated Professional Thank You Slide
+# ==============================================================================
+slide7 = prs.slides.add_slide(blank_layout)
+set_slide_background(slide7)
 
-tf_thx = thx_box.text_frame
-tf_thx.word_wrap = True
+# Main Hero Card (Expansive, Elegant Keynote Frame)
+thx_card = slide7.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.9), Inches(0.85), Inches(11.533), Inches(5.8))
+thx_card.fill.solid()
+thx_card.fill.fore_color.rgb = SURFACE
+thx_card.line.color.rgb = BORDER_SUBTLE
+thx_card.line.width = Pt(1)
 
-p_ty = tf_thx.paragraphs[0]
-p_ty.text = "Thank You!"
-p_ty.font.size = Pt(22)
-p_ty.font.bold = True
-p_ty.font.color.rgb = TEXT_PRIMARY
-p_ty.font.name = "Outfit"
-p_ty.alignment = PP_ALIGN.CENTER
+# Eyebrow Pill
+thx_pill = slide7.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(4.416), Inches(1.25), Inches(4.5), Inches(0.42))
+thx_pill.fill.solid()
+thx_pill.fill.fore_color.rgb = SURFACE_TINT
+thx_pill.line.color.rgb = BORDER_ACTIVE
+thx_pill.line.width = Pt(1)
+p_tpill = thx_pill.text_frame.paragraphs[0]
+p_tpill.text = "CAPSTONE EVALUATION & CONCLUSION"
+p_tpill.font.size = Pt(9.5)
+p_tpill.font.bold = True
+p_tpill.font.color.rgb = ACCENT_INDIGO
+p_tpill.font.name = "JetBrains Mono"
+p_tpill.alignment = PP_ALIGN.CENTER
 
-p_sig1 = tf_thx.add_paragraph()
-p_sig1.text = "Swetha N. — B.E. Computer Science and Design"
-p_sig1.font.size = Pt(12)
-p_sig1.font.bold = True
-p_sig1.font.color.rgb = ACCENT_BLUE
-p_sig1.font.name = "Inter"
-p_sig1.alignment = PP_ALIGN.CENTER
-p_sig1.space_before = Pt(4)
+# Main Title: "Thank You!"
+tb_thx_title = slide7.shapes.add_textbox(Inches(1.5), Inches(1.85), Inches(10.333), Inches(1.1))
+tf_tt = tb_thx_title.text_frame
+tf_tt.word_wrap = True
+p_tt = tf_tt.paragraphs[0]
+p_tt.text = "Thank You!"
+p_tt.font.size = Pt(44)
+p_tt.font.bold = True
+p_tt.font.color.rgb = TEXT_PRIMARY
+p_tt.font.name = "Outfit"
+p_tt.alignment = PP_ALIGN.CENTER
 
-p_sig2 = tf_thx.add_paragraph()
-p_sig2.text = "Rajalakshmi Engineering College · Chennai"
-p_sig2.font.size = Pt(10.5)
-p_sig2.font.color.rgb = TEXT_SECONDARY
-p_sig2.font.name = "Inter"
-p_sig2.alignment = PP_ALIGN.CENTER
+# Subtitle / Q&A Prompt
+tb_thx_sub = slide7.shapes.add_textbox(Inches(1.5), Inches(2.9), Inches(10.333), Inches(0.6))
+tf_ts = tb_thx_sub.text_frame
+tf_ts.word_wrap = True
+p_ts = tf_ts.paragraphs[0]
+p_ts.text = "Open for Technical Questions, Architectural Discussions & Feedback"
+p_ts.font.size = Pt(15)
+p_ts.font.bold = False
+p_ts.font.color.rgb = TEXT_SECONDARY
+p_ts.font.name = "Inter"
+p_ts.alignment = PP_ALIGN.CENTER
+
+# Divider Line
+div_thx = slide7.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(2.5), Inches(3.6), Inches(8.333), Inches(0.02))
+div_thx.fill.solid()
+div_thx.fill.fore_color.rgb = BORDER_SUBTLE
+div_thx.line.fill.background()
+
+# Presenter Info Banner / Box
+p_banner = slide7.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(1.5), Inches(3.85), Inches(10.333), Inches(0.95))
+p_banner.fill.solid()
+p_banner.fill.fore_color.rgb = SURFACE_LIGHT
+p_banner.line.color.rgb = BORDER_SUBTLE
+p_banner.line.width = Pt(1)
+
+tf_pb = p_banner.text_frame
+tf_pb.word_wrap = True
+p_pb1 = tf_pb.paragraphs[0]
+p_pb1.text = "Swetha N.  ·  B.E. Computer Science and Design (Class of 2028)"
+p_pb1.font.size = Pt(14)
+p_pb1.font.bold = True
+p_pb1.font.color.rgb = TEXT_PRIMARY
+p_pb1.font.name = "Outfit"
+p_pb1.alignment = PP_ALIGN.CENTER
+
+p_pb2 = tf_pb.add_paragraph()
+p_pb2.text = "Rajalakshmi Engineering College, Chennai  ·  CGPA: 8.65"
+p_pb2.font.size = Pt(11)
+p_pb2.font.color.rgb = ACCENT_BLUE
+p_pb2.font.name = "Inter"
+p_pb2.alignment = PP_ALIGN.CENTER
+p_pb2.space_before = Pt(3)
+
+# 3 Contact / Resource Cards
+connect_cols = [
+    ("LIVE DEPLOYMENT", "Vercel Edge Platform", "my-portfolio-...vercel.app", ACCENT_EMERALD),
+    ("GITHUB REPOSITORY", "swethanagaraj2007", "github.com/swethanagaraj2007", ACCENT_INDIGO),
+    ("PROFESSIONAL CONNECT", "LinkedIn Network", "linkedin.com/in/swetha-n-005697334", ACCENT_BLUE)
+]
+
+for i, (tag, val1, val2, col) in enumerate(connect_cols):
+    cx = Inches(1.5 + i * 3.55)
+    cy = Inches(5.0)
+    
+    c_box = slide7.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, cx, cy, Inches(3.233), Inches(1.35))
+    c_box.fill.solid()
+    c_box.fill.fore_color.rgb = SURFACE_LIGHT
+    c_box.line.color.rgb = BORDER_SUBTLE
+    c_box.line.width = Pt(1)
+    
+    # Colored top indicator bar
+    c_bar = slide7.shapes.add_shape(MSO_SHAPE.RECTANGLE, cx, cy, Inches(3.233), Inches(0.04))
+    c_bar.fill.solid()
+    c_bar.fill.fore_color.rgb = col
+    c_bar.line.fill.background()
+    
+    tf_c = c_box.text_frame
+    tf_c.word_wrap = True
+    
+    p_ctag = tf_c.paragraphs[0]
+    p_ctag.text = tag
+    p_ctag.font.size = Pt(8.5)
+    p_ctag.font.bold = True
+    p_ctag.font.color.rgb = col
+    p_ctag.font.name = "JetBrains Mono"
+    
+    p_cv1 = tf_c.add_paragraph()
+    p_cv1.text = val1
+    p_cv1.font.size = Pt(12)
+    p_cv1.font.bold = True
+    p_cv1.font.color.rgb = TEXT_PRIMARY
+    p_cv1.font.name = "Outfit"
+    p_cv1.space_before = Pt(4)
+    
+    p_cv2 = tf_c.add_paragraph()
+    p_cv2.text = val2
+    p_cv2.font.size = Pt(9.5)
+    p_cv2.font.color.rgb = TEXT_MUTED
+    p_cv2.font.name = "JetBrains Mono"
+    p_cv2.space_before = Pt(2)
 
 # Save the PowerPoint presentation
 try:
